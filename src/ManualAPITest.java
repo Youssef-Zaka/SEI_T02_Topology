@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 //a class to test the Topology_Api
-public class ApiTest {
+public class ManualAPITest {
     public static void main(String[] args) {
 
         //Topology object

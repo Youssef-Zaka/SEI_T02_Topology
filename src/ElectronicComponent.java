@@ -13,17 +13,7 @@ public class ElectronicComponent {
     //a property JSONArray that can be accessed by a key string
     private JSONObject property;
 
-    // Constructors
-    public ElectronicComponent(String type, String id, JSONObject netList,JSONObject property) {
-        this.type = type;
-        this.id = id;
-        this.netList = netList;
-        this.property = property;
-    }
-    public ElectronicComponent(String type, String id) {
-        this.type = type;
-        this.id = id;
-    }
+    // Constructor
     public ElectronicComponent(String type, String id,  JSONObject netList) {
         this.type = type;
         this.id = id;
@@ -40,24 +30,6 @@ public class ElectronicComponent {
     public JSONObject getNetList() {
         return netList;
     }
-    public JSONObject getProperty() {
-        return property;
-    }
-
-    // Setters
-    public void setType(String type) {
-        this.type = type;
-    }
-    public void setId(String id) {
-        this.id = id;
-    }
-    public void setNetList(JSONObject netList) {
-        this.netList = netList;
-    }
-    public void setProperty(JSONObject property) {
-        this.property = property;
-    }
-
     // toString
     @Override
     public String toString() {

@@ -3,7 +3,7 @@
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.json.JSONString;
+
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -13,7 +13,7 @@ import java.util.*;
 
 
 public class Topology_Api {
-
+    
     //method that reads a topology from a json file and returns a topology object
     //input: file name
     //output: topology object

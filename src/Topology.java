@@ -17,16 +17,8 @@ public class Topology {
         return id;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
     public List<ElectronicComponent> getComponents() {
         return components;
-    }
-
-    public void setComponents(List<ElectronicComponent> components) {
-        this.components = components;
     }
 
     //ToString
