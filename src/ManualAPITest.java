@@ -78,6 +78,18 @@ public class ManualAPITest {
         //print the ids
         System.out.println(deviceIds);
 
+        waitForUserInput();
+
+    }
+
+    //wait for user input to exit
+    public static void waitForUserInput() {
+        System.out.println("Press enter to exit...");
+        try {
+            System.in.read();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 }
