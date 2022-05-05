@@ -1,3 +1,6 @@
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.util.Map;
 
 public class ElectronicComponent {
@@ -5,12 +8,13 @@ public class ElectronicComponent {
 
     private String type;
     private String id;
-    //a netlist map that can be accessed by a key string
-    private Map<String, Map<String,String>> netList;
-    private Map<String, Map<String,String>> property;
+    //a netlist JSONArray that can be accessed by a key string
+    private JSONObject netList;
+    //a property JSONArray that can be accessed by a key string
+    private JSONObject property;
 
     // Constructors
-    public ElectronicComponent(String type, String id, Map<String, Map<String,String>> netList, Map<String, Map<String,String>> property) {
+    public ElectronicComponent(String type, String id, JSONObject netList,JSONObject property) {
         this.type = type;
         this.id = id;
         this.netList = netList;
@@ -20,7 +24,7 @@ public class ElectronicComponent {
         this.type = type;
         this.id = id;
     }
-    public ElectronicComponent(String type, String id, Map<String, Map<String,String>> netList) {
+    public ElectronicComponent(String type, String id,  JSONObject netList) {
         this.type = type;
         this.id = id;
         this.netList = netList;
@@ -33,10 +37,10 @@ public class ElectronicComponent {
     public String getId() {
         return id;
     }
-    public Map<String, Map<String,String>> getNetList() {
+    public JSONObject getNetList() {
         return netList;
     }
-    public Map<String, Map<String,String>> getProperty() {
+    public JSONObject getProperty() {
         return property;
     }
 
@@ -47,16 +51,21 @@ public class ElectronicComponent {
     public void setId(String id) {
         this.id = id;
     }
-    public void setNetList(Map<String, Map<String,String>> netList) {
+    public void setNetList(JSONObject netList) {
         this.netList = netList;
     }
-    public void setProperty(Map<String, Map<String,String>> property) {
+    public void setProperty(JSONObject property) {
         this.property = property;
     }
 
     // toString
+    @Override
     public String toString() {
-        return "ElectronicComponent [type=" + type + ", id=" + id + ", netList=" + netList + ", property=" + property + "]";
+        return "ElectronicComponent{\n" +
+                "type='" + type + "',\n" +
+                "id='" + id + "',\n" +
+                "netList= \n" + netList +
+                "\n}";
     }
 
 }
