@@ -1,4 +1,5 @@
-# SEI_T02_Topology
+# Simple Topology API
+
 
 Topology Api Task built in java, where the api provides some functionality for dealing with Topology Jsons
 
